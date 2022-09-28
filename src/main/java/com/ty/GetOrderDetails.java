@@ -11,6 +11,7 @@ public class GetOrderDetails {
 		EntityManagerFactory entityManagerFactory=Persistence.createEntityManagerFactory("vikas");
 		EntityManager entityManager=entityManagerFactory.createEntityManager();
 		FoodOrder foodOrder=entityManager.find(FoodOrder.class, 1);
+		System.out.println();
 		System.out.println("----order details----");
 		System.out.println("id="+foodOrder.getId());
 		System.out.println("name="+foodOrder.getName());
