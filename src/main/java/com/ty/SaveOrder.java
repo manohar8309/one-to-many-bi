@@ -19,11 +19,13 @@ public class SaveOrder {
 		itom.setName("chicken");
 		itom.setQuantity(2);
 		itom.setCost(300);
+		itom.setFoodOrder(foodOrder);
 		
 		Itom itom1=new Itom();
 		itom1.setName("mutton");
 		itom1.setQuantity(1);
 		itom1.setCost(450);
+		itom1.setFoodOrder(foodOrder);
 		
 		List<Itom> itoms=new ArrayList<Itom>();
 		itoms.add(itom);

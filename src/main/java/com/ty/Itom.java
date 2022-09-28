@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Itom {
@@ -13,6 +15,9 @@ public class Itom {
 	private String name;
 	private int quantity;
 	private double cost;
+	@ManyToOne
+	@JoinColumn
+	private FoodOrder foodOrder;
 	
 	public int getId() {
 		return id;
@@ -37,6 +42,12 @@ public class Itom {
 	}
 	public void setCost(double cost) {
 		this.cost = cost;
+	}
+	public FoodOrder getFoodOrder() {
+		return foodOrder;
+	}
+	public void setFoodOrder(FoodOrder foodOrder) {
+		this.foodOrder = foodOrder;
 	}
 	
 	

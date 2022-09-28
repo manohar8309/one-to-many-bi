@@ -15,7 +15,7 @@ public class FoodOrder {
 	private int id;
 	private String name;
 	private String status;
-	@OneToMany
+	@OneToMany(mappedBy = "foodOrder")
 	private List<Itom> itoms;
 	
 	public int getId() {
