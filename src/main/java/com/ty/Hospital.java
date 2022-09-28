@@ -1,5 +1,7 @@
 package com.ty;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,9 +16,9 @@ public class Hospital {
 	private int id;
 	private String name;
 	private String website;
-	@OneToMany
-	@JoinColumn
-	private Branch branch;
+	@OneToMany(mappedBy = "hospital")
+	
+	private List<Branch> branchs;
 
 	public int getId() {
 		return id;
@@ -42,13 +44,15 @@ public class Hospital {
 		this.website = website;
 	}
 
-	public Branch getBranch() {
-		return branch;
+	public List<Branch> getBranchs() {
+		return branchs;
 	}
 
-	public void setBranch(Branch branch) {
-		this.branch = branch;
+	public void setBranchs(List<Branch> branchs) {
+		this.branchs = branchs;
 	}
+
+	
 	
 
 }
